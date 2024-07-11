@@ -1,42 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 1px solid #000;
-    /* Customize the border */
-    border-radius: 0.25rem;
-    /* Customize the border radius */
-    cursor: pointer;
-    position: relative;
-    background-color: white;
-}
 
-/* Custom styles for checked state */
-input[type="checkbox"]:checked {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="16" height="12" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1" stroke="#000" stroke-linecap="round"/></svg>');
-    border-color: transparent;
-    /* Hide the border when checked */
-}
 
-input[type="checkbox"]:checked::after {
-    content: '';
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    width: 1rem;
-    height: 1rem;
-    /* background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="16" height="12" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1" stroke="#000" stroke-linecap="round"/></svg>'); */
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>');
-    /* Customize the checkmark icon */
-    background-size: contain;
-    background-color: red;
-    background-repeat: no-repeat;
-    background-position: center;
+div.pagesContainer {
+    box-shadow: 0px 8px 15px 0px #1414141F, 0px 0px 4px 0px #1414141A;
 }

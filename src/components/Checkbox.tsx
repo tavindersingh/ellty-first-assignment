@@ -1,9 +1,19 @@
 import { useState } from "react";
 import CheckIcon from "./icons/CheckIcon";
 
-export default function Checkbox() {
+type CheckboxProps = {
+  isSelected: boolean;
+  onChange: (isSelected: boolean) => void;
+};
+
+export default function Checkbox({ isSelected, onChange }: CheckboxProps) {
   const [isPressing, setIsPressing] = useState(false);
-  const [isSelected, setIsSelected] = useState(false);
+  // const [isSelected, setIsSelected] = useState(value);
+
+  const onClick = () => {
+    // setIsSelected(!isSelected);
+    onChange(!isSelected);
+  };
 
   return (
     <div className="flex">
@@ -17,7 +27,7 @@ export default function Checkbox() {
         }`}
         onMouseDown={() => setIsPressing(true)}
         onMouseUp={() => setIsPressing(false)}
-        onClick={() => setIsSelected(!isSelected)}
+        onClick={onClick}
       >
         <span
           className={`group-hover:block ${isSelected ? "block" : "hidden"}`}
